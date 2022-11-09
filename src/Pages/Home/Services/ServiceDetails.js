@@ -12,16 +12,13 @@ const ServiceDetails = () => {
         <h5 className="text-center"><span className="text-2xl">Price</span>: ${price}</h5>
             <h3>{description}</h3>
         </div>
-        {/* <div className='artboard artboard-horizontal phone-2'>
-            <img className="w-3/4 p-3 rounded-md" src={img} alt="service-img" />
-        </div> */}
+        
         <div className='artboard artboard-horizontal phone-2'>
             <PhotoProvider>
                 <PhotoView src={img}>
                 <img style={{cursor:"pointer"}} className="w-3/4 p-3 rounded-md" src={img} alt="service-img" />
                 </PhotoView>
             </PhotoProvider>
-            {/* <img className="w-3/4 p-3 rounded-md" src={img} alt="service-img" /> */}
         </div>
     </div>
   );
