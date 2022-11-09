@@ -1,4 +1,5 @@
 import Main from "../Layout/Main";
+import Blog from "../Pages/Blog/Blog";
 // import Checkout from "../Pages/Checkout/Checkout";
 import Home from "../Pages/Home/Home";
 import AddServices from "../Pages/Home/Services/AddServices";
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
             {
                 path: 'add-services',
                 element: <PrivateRoute><AddServices /></PrivateRoute>
+            },
+            {
+                path: 'blog',
+                element:<Blog />
             }
         ]
     }
