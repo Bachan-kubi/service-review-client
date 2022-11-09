@@ -55,12 +55,12 @@ const Checkout = () => {
     <div>
       <form onSubmit={handleReview}>
         <h2 className="text-orange-600 text-center text-3xl font-semibold">
-          You are about to Order: {title}
+          Review: {title}
         </h2>
-        <h3 className="text-orange-600 text-center text-3xl font-semibold">
+        {/* <h3 className="text-orange-600 text-center text-3xl font-semibold">
           Value: $ {price}
-        </h3>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        </h3> */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 m-3">
           <input
             name="firstName"
             input-bordered

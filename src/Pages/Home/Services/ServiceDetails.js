@@ -31,7 +31,6 @@ const ServiceDetails = () => {
         </div>
       </div>
       <div>
-        <h3>Review Services</h3>
           <Checkout />
       </div>
     </div>
