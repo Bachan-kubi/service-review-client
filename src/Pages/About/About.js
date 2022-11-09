@@ -1,6 +1,5 @@
 import React from "react";
 import person from '../../assets2/carousel-2.jpg'
-// import parts from '../../assets/images/about_us/parts.jpg'
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 
@@ -14,12 +13,7 @@ const About = () => {
             <img style={{cursor:"pointer"}} src={person} alt="" />
           </PhotoView>
         </PhotoProvider>
-        {/* <img
-          src={person}
-          className="w-4/5 rounded-lg shadow-2xl" alt='img'
-        /> */}
         <img
-          // src={parts}
           className="w-3/5 right-5 top-2/4 absolute rounded-lg shadow-2xl" alt=""
         />
         </div>
