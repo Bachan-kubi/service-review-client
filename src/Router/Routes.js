@@ -1,6 +1,6 @@
 import Main from "../Layout/Main";
 import Blog from "../Pages/Blog/Blog";
-// import Checkout from "../Pages/Checkout/Checkout";
+import Checkout from "../Pages/Checkout/Checkout";
 import Home from "../Pages/Home/Home";
 import AddServices from "../Pages/Home/Services/AddServices";
 import AllServices from "../Pages/Home/Services/AllServices";
@@ -31,11 +31,11 @@ const router = createBrowserRouter([
                 path: 'signup',
                 element: <Signup />
             },
-            // {
-            //     path: 'checkout/:id',
-            //     element: <PrivateRoute><Checkout /></PrivateRoute>,
-            //     loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
-            // },
+            {
+                path: 'checkout/:id',
+                element: <PrivateRoute><Checkout /></PrivateRoute>,
+                loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
+            },
             {
                 path: 'serviceDetails/:id',
                 element: <PrivateRoute><ServiceDetails /></PrivateRoute>,
@@ -52,7 +52,8 @@ const router = createBrowserRouter([
             },
             {
                 path: 'add-services',
-                element: <PrivateRoute><AddServices /></PrivateRoute>
+                element: <PrivateRoute><AddServices /></PrivateRoute>,
+                loader: ({params})=>fetch(`http://localhost:5000/services/${params.id}`)
             },
             {
                 path: 'blog',
