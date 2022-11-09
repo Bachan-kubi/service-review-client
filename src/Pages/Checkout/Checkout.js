@@ -44,7 +44,7 @@ const Checkout = () => {
             console.log(data);
             if(data.acknowledged) {
             form.reset();
-            alert("Ordered Placed seuccessfully!");
+            alert("Review Placed seuccessfully!");
             }
         })
         .catch((error) => console.error(error));
