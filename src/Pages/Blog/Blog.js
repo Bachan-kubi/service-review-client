@@ -45,6 +45,41 @@ const Blog = () => {
           that only the party holding the private key is the one that signed it.
         </h5>
       </div>
+      <div>
+        <h2 className="text-4xl text-bold text-center m-3">
+          What is the Difference between Javascript and Node.js?
+        </h2>
+        <h4 className="text-semibold m-2">
+          1. NodeJS : NodeJS is a cross-platform and opensource Javascript
+          runtime environment that allows the javascript to be run on the
+          server-side. Nodejs allows Javascript code to run outside the browser.
+          Nodejs comes with a lot of modules and mostly used in web development.
+          2. JavaScript : Javascript is a Scripting language. It is mostly
+          abbreviated as JS. It can be said that Javascript is the updated
+          version of the ECMA script. Javascript is a high-level programming
+          language that uses the concept of Oops but it is based on prototype
+          inheritance.
+        </h4>
+      </div>
+      <div>
+        <h3 className="text-4xl text-bold text-center m-3">How does NodeJS handle multiple requests at the same time?</h3>
+        <h3 className="text-semibold m-2">
+          We know NodeJS application is single-threaded. Say, if processing
+          involves request A that takes 10 seconds, it does not mean that a
+          request which comes after this request needs to wait 10 seconds to
+          start processing because NodeJS event loops are only single-threaded.
+          The entire NodeJS architecture is not single-threaded. How NodeJS
+          handle multiple client requests? NodeJS receives multiple client
+          requests and places them into EventQueue. NodeJS is built with the
+          concept of event-driven architecture. NodeJS has its own EventLoop
+          which is an infinite loop that receives requests and processes them.
+          EventLoop is the listener for the EventQueue. If NodeJS can process
+          the request without I/O blocking then the event loop would itself
+          process the request and sends the response back to the client by
+          itself. But, it is possible to process multiple requests parallelly
+          using the NodeJS cluster module or worker_threads module.
+        </h3>
+      </div>
     </div>
   );
 };
