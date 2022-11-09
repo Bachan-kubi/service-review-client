@@ -94,7 +94,7 @@ const Checkout = () => {
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Type your message</span>
+            <span className="label-text">Type your Comments!</span>
           </label>
           <textarea
             name="message"

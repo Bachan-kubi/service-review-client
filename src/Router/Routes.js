@@ -2,6 +2,7 @@ import Main from "../Layout/Main";
 import Blog from "../Pages/Blog/Blog";
 import Checkout from "../Pages/Checkout/Checkout";
 import Home from "../Pages/Home/Home";
+import AddServices from "../Pages/Home/Services/AddServices";
 import AllServices from "../Pages/Home/Services/AllServices";
 import ServiceDetails from "../Pages/Home/Services/ServiceDetails";
 import Login from "../Pages/Login/Login";
@@ -32,7 +33,9 @@ const router = createBrowserRouter([
             },
             {
                 path: 'add-services',
-                element: <PrivateRoute><Checkout /></PrivateRoute>,
+                element: <PrivateRoute>
+                    <AddServices />
+                </PrivateRoute>,
                 loader: ()=>fetch(`http://localhost:5000/services`)
             },
             {
@@ -55,8 +58,9 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><Orders /></PrivateRoute>
             },
             {
-                path: 'blog',
+                path: 'blogs',
                 element:<Blog />
+                // loader: ()=>fetch('http://localhost:5000/blogs')
             }
         ]
     }

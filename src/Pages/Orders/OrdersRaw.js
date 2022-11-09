@@ -34,7 +34,7 @@ const OrdersRaw = ({ order, handleDelete, handleStatusUpdate }) => {
               </div>
             </div>
             <div>
-              <div className="font-bold">Service Name: {curstomer}</div>
+              <div className="font-bold">{curstomer}</div>
               <div className="text-sm opacity-50">{phone}</div>
             </div>
           </div>
