@@ -1,15 +1,28 @@
+import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../assets2/logo-4.png";
 import { AuthContext } from "../../../Context/AuthProvider";
 
+
+
+const googleProvider = new GoogleAuthProvider();
 const Header = () => {
-  const {user, logOut} = useContext(AuthContext);
+  const {user, logOut, providerLogIn} = useContext(AuthContext);
 
   const handleLogOut=()=>{
     logOut()
     .then()
     .catch()
+  }
+  const handleGoogle=()=>{
+    providerLogIn(googleProvider)
+    .then(result=>{
+      const user=result.user;
+      console.log(user)
+    })
+    .catch(err=>console.error(err));
+
   }
   const menuItems = <>
     <li className="font-semibold"><Link to="/">Home</Link></li>
@@ -62,7 +75,8 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-      <button className="btn btn-outline btn-warning">Appointment</button>
+        
+      <button onClick={handleGoogle} className="btn btn-outline btn-warning">Sign in with Google</button>
       </div>
     </div>
   );

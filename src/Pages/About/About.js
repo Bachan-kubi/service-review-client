@@ -18,12 +18,10 @@ const About = () => {
         />
         </div>
         <div className="w-1/2 mx-5">
-            <h6 className="font-bold text-orange-700">About Us</h6>
+            <h6 className="font-bold text-orange-700">About Me!</h6>
           <h1 className="text-5xl font-bold">Box Office News!</h1>
           <p className="py-6">
-            We are Qulified cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            I am delighted and blessed to being a business partner with You. As you know, I have vast knowledge and experience in making the website more trafficed and visited!. you
           </p>
           <button className="btn btn-primary bg-orange">Get More Info!</button>
         </div>
