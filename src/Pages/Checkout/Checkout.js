@@ -7,7 +7,7 @@ const Checkout = () => {
   console.log(description);
   const { user } = useContext(AuthContext);
 
-  const handleOrder = (event) => {
+  const handleReview = (event) => {
     event.preventDefault();
     const form = event.target;
     const name = `${form.firstName.value} ${form.lastName.value}`;
@@ -53,7 +53,7 @@ const Checkout = () => {
 
   return (
     <div>
-      <form onSubmit={handleOrder}>
+      <form onSubmit={handleReview}>
         <h2 className="text-orange-600 text-center text-3xl font-semibold">
           You are about to Order: {title}
         </h2>
@@ -105,7 +105,7 @@ const Checkout = () => {
         <input
           className="btn btn-primary"
           type="submit"
-          value="Place Your Order"
+          value="Submit Reviews"
         />
       </form>
     </div>

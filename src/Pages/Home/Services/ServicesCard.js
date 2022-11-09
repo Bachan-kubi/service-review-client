@@ -29,12 +29,12 @@ const ServicesCard = ({ service }) => {
           <button className="btn btn-primary w-96">See All Services</button>
           </Link>
         </div>
-        <div className="card-actions justify-end">
-          {/* <Link to={`/checkout/${_id}`}> */}
+        {/* <div className="card-actions justify-end">
+          <Link to={`/checkout/${_id}`}>
           <Link to={`/add-services/${_id}`}>
           <button className="btn btn-primary">Check Out</button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
