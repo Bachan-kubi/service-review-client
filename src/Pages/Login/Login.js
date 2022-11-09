@@ -2,8 +2,10 @@ import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginImage from "../../assets2/carousel-3.jpg";
 import { AuthContext } from "../../Context/AuthProvider";
+import useTitle from "../../Hook/Hook";
 
 const Login = () => {
+  useTitle('Login')
   const {login}= useContext(AuthContext);
   const location= useLocation();
   const navigate = useNavigate();

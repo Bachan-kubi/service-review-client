@@ -4,9 +4,11 @@ import { AuthContext } from "../../../Context/AuthProvider";
 // import { AuthContext } from "../../Context/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from "../../../Hook/Hook";
 
 const AddServices = () => {
-    const notify = () => toast("Wow so easy!");
+    useTitle("Add Services");
+    // const notify = () => toast("Wow so easy!");
 //   const { title, price, _id, description } = useLoaderData();
   const { title, _id, description } = useLoaderData();
   console.log(description);
@@ -50,7 +52,8 @@ const AddServices = () => {
             console.log(data);
             if(data.acknowledged) {
             form.reset();
-            alert("Service added seuccessfully!");
+            toast('weldone! Service Added!')
+            // alert("Service added seuccessfully!");
             }
         })
         .catch((error) => console.error(error));
@@ -60,8 +63,19 @@ const AddServices = () => {
   return (
     <div>
         <div>
-            <button onClick={notify}>Notify!</button>
-        <ToastContainer />
+            {/* <button onClick={notify}>Notify!</button> */}
+            <ToastContainer
+                position="top-center"
+                autoClose={1500}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+             />
         </div>
       <form onSubmit={handleReview}>
         <h2 className="text-orange-600 text-center text-3xl font-semibold">
