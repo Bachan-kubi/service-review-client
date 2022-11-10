@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Checkout = () => {
   const { title, price, _id, description } = useLoaderData();
@@ -44,7 +46,9 @@ const Checkout = () => {
             console.log(data);
             if(data.acknowledged) {
             form.reset();
-            alert("Review Placed seuccessfully!");
+            toast('Congratulation! Review Posteed!');
+            }else{
+              toast('Not review added!')
             }
         })
         .catch((error) => console.error(error));
@@ -53,6 +57,20 @@ const Checkout = () => {
 
   return (
     <div>
+      <div>
+            <ToastContainer
+                position="top-center"
+                autoClose={1500}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+             />
+        </div>
       <form onSubmit={handleReview}>
         <h2 className="text-orange-600 text-center text-3xl font-semibold">
           Review: {title}

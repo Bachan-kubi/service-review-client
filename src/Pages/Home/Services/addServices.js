@@ -54,6 +54,9 @@ const AddServices = () => {
             form.reset();
             toast('weldone! Service Added!')
             // alert("Service added seuccessfully!");
+            }else{
+              toast('No Service Added!');
+              return;
             }
         })
         .catch((error) => console.error(error));
@@ -63,7 +66,6 @@ const AddServices = () => {
   return (
     <div>
         <div>
-            {/* <button onClick={notify}>Notify!</button> */}
             <ToastContainer
                 position="top-center"
                 autoClose={1500}

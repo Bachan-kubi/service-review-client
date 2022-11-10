@@ -18,18 +18,17 @@ const ServicesCard = ({ service }) => {
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>{description.slice(0, 100)+ "..."}</p>
-        <Link to={`/servicedetails/${_id}`}>
+        <Link className="card-actions justify-end" to={`/servicedetails/${_id}`}>
           <button className="btn btn-xs">View Details</button>
-          </Link>
+        </Link>
         <h6 className="text-2xl text-orange-600 text-semibold">Price: {price}</h6>
         <div className="card-actions justify-end">
-          
         </div>
-        <div className="card-actions justify-end">
+        {/* <div className="card-actions justify-end">
           <Link to='/allServices'>
           <button className="btn btn-primary w-96">See All Services</button>
           </Link>
-        </div>
+        </div> */}
         {/* <div className="card-actions justify-end">
           <Link to={`/checkout/${_id}`}>
           <Link to={`/add-services/${_id}`}>
