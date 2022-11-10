@@ -34,7 +34,7 @@ const Checkout = () => {
     // }
 
         // create order in and save data base mongodb
-        fetch("http://localhost:5000/orders", {
+        fetch("https://web-developer-server-five.vercel.app/orders", {
         method: "POST",
         headers: {
             "content-type": "application/json",
