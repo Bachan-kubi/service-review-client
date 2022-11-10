@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 // import loginImage from "../../assets/images/login/login.svg";
 import { AuthContext } from '../../Context/AuthProvider';
 
 const Signup = () => {
   const {createUser} = useContext(AuthContext);
-
+  const navigate = useNavigate();
 
     const handleSignup = (event) => {
+      
         event.preventDefault();
         const form = event.target;
         // const name = form.name.value;
@@ -20,6 +21,7 @@ const Signup = () => {
         .then(result=>{
           const user=result.user;
           console.log(user);
+          navigate('/');
         })
         .catch(error=>console.error(error))
         // finished create user
@@ -56,7 +58,7 @@ const Signup = () => {
           <div className="text-center lg:text-left">
             <img className="w-3/4"
             //  src={loginImage} 
-             alt="logimage" />
+             alt="" />
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 my-20 py-10">
             <form onSubmit={handleSignup} className="card-body">

@@ -46,7 +46,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'serviceDetails/:id',
-                element: <PrivateRoute><ServiceDetails /></PrivateRoute>,
+                element: <ServiceDetails />,
                 loader: ({params})=>fetch(`https://web-developer-server-five.vercel.app/services/${params.id}`)
             },
             {
