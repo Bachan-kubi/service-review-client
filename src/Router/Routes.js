@@ -1,6 +1,7 @@
 import Main from "../Layout/Main";
 import Blog from "../Pages/Blog/Blog";
 import Checkout from "../Pages/Checkout/Checkout";
+import Error from "../Pages/Error/Error";
 import Home from "../Pages/Home/Home";
 import AddServices from "../Pages/Home/Services/AddServices";
 import AllServices from "../Pages/Home/Services/AllServices";
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'allServices',
-                element: <PrivateRoute><AllServices /></PrivateRoute>,
+                element: <AllServices />
                 // loader: ({params})=>fetch(`https://web-developer-server-five.vercel.app/services/${params.id}`)
             },
             {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
                 // loader: ()=>fetch('https://web-developer-server-five.vercel.app/blogs')
             }
         ]
+    },
+    {
+        path: '*',
+        element: <Error />
     }
 ]);
 
